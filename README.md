@@ -3,7 +3,7 @@ This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the o
 
 # Overall Steps
 - Docker containerize trading-app
- - Step1.Start Docker
+  - Step1.Start Docker
  - Step2.Creating a network brige
  - Step3.Building PSQL image
  - Step4.Building trading-app image
