@@ -16,6 +16,66 @@ This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the o
   - Step5.Complie and package source code.
   - Step6.Deploy to eb envir using EB CLI.
 
+# CLI
+<br>#auto start
+sudo systemctl enable docker
+#start service
+sudo systemctl start docker
+sudo docker -v
+#Creating a network bridge
+sudo docker network create --driver bridge trading-net
+#Building PSQL image
+git clone git@github.com:keshang-xxpk/Cloud_devOps.git
+cd trading_app/psql
+#ls image
+docker image ls
+
+#check Docker file
+cat Dockerfile
+
+#build docker image
+docker build -t jrvs-psql .
+
+#run psql
+#attach this container to the network bridge
+sudo docker run --rm --name jrvs-psql \
+--restart unless-stopped \
+-e POSTGRES_PASSWORD=password \
+-e POSTGRES_DB=jrvstrading \
+-e POSTGRES_USER=postgres \
+--network trading-net \
+-d -p 5432:5432 -t jrvs-psql
+
+#list runing containers
+docker container ls
+#Building trading app image
+cd trading_app/
+
+#check Docker file
+cat Dockerfile
+
+#build trading app
+docker build -t trading-app .
+
+IEX_TOKEN='your_token'
+
+sudo docker run --rm --name trading-app-v1 \
+--restart unless-stopped \
+-e 'PSQL_URL=jdbc:postgresql://jrvs-psql:5432/jrvstrading' \
+-e 'PSQL_USER=postgres' \
+-e 'PSQL_PASSWORD=password' \
+-e "IEX_PUB_TOKEN=${IEX_TOKEN}" \
+--network trading-net \
+-p 8080:8080 -t trading-app
+
+#list running containers
+docker container ls
+
+#verify health
+curl localhost:8080/health
+#verify Swagger UI from your browser
+localhost:8080/swagger-ui.html</br>
+
 # Docker Architecture Diagram
 - trading_app docker diagram including:
  - use draw.io and AWS icons (it's already in draw.io library)
@@ -29,6 +89,7 @@ This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the o
    - talk about the process (e.g. compile and package jar and run the app)
   - jrvs-psql
    - talk about how to create tables (e.g. schema.sql)
+   
 
 # Cloud Architecture Diagram
 - trading app diagram
