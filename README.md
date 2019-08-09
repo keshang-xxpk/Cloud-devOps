@@ -119,6 +119,9 @@ deploy:
 #deploy
 eb deploy
 ```
+# Trading-app Architecture Diagram
+![5A13915F-507C-4510-B803-58B608025AEF](assets/5A13915F-507C-4510-B803-58B608025AEF.png)
+
 # Docker Architecture Diagram
 - trading_app docker diagram including:
  - use draw.io and AWS icons (it's already in draw.io library)
