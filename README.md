@@ -1,6 +1,20 @@
 # Introduction
-What project you will deploy and project GitHub URL (your implementation is preferred)
-Describe your project at a high level (microserver, psql, java)
+This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the online stock trading simulation REST API which can handle options for user to manage their trading account,buy and sell stock,get the latest data from the stock market,and ect.
+
+# Overall Steps
+- Docker containerize trading-app
+ - Step1.Start Docker
+ - Step2.Creating a network brige
+ - Step3.Building PSQL image
+ - Step4.Building trading-app image
+ - Step5.Connect the trading-app
+- Migrating trading-app to AWS cloud service
+ - Step1.Creating a  new application and envusing AWS Elastic Beanstalk to help us manage and dev the project.
+ - Step2.Figure out all the config:Security group,ec2 instances,RDS,etc.
+ - Step3.Edit pom file and assembly file make sure your code can talk to EB.
+ - Step4.Download the latest source code of Jenkins from GitHub.
+ - Step5.Complie and package source code.
+ - Step6.Deploy to eb envir using EB CLI.
 
 # Docker Architecture Diagram
 - trading_app docker diagram including:
