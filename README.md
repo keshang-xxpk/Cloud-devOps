@@ -17,7 +17,8 @@ This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the o
   - Step6.Deploy to eb envir using EB CLI.
 
 # CLI
-<br>#auto start
+```
+#auto start
 sudo systemctl enable docker
 #start service
 sudo systemctl start docker
@@ -74,7 +75,8 @@ docker container ls
 #verify health
 curl localhost:8080/health
 #verify Swagger UI from your browser
-localhost:8080/swagger-ui.html</br>
+localhost:8080/swagger-ui.html
+```
 
 # Docker Architecture Diagram
 - trading_app docker diagram including:
