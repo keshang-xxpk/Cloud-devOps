@@ -78,7 +78,45 @@ curl localhost:8080/health
 localhost:8080/swagger-ui.html
 ```
 # Setup Jenkins Instance CLI
+```BASH
+#default user name is ubuntu
+ssh-i ~/.ssh/pem/your_pem.pem ubuntu@ec_pub_ip
+sudo su - 
+cd /tmp
+#install jenkins repo
+wget http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key
+apt-key add jenkins-ci.org.key
+echo"deb http://pkg.jenkins-ci.org/debian binary/" >
+/etc/apt/sources.list.d/jenkins.list
 
+#install java nginx Jenkins
+apt update
+apt install -y openjdk-8-jdk nginx jenkins python-pip maven
+sleep1
+
+#install elastic beanstalk cli tool
+pip install --system awsebcli
+```
+# EB CLI
+#ssh Jenkins instance
+cd ~
+git clone https://your_trading_app_url
+cd your_app_dir
+mvn clean package -DskipTests
+
+#remove exiting EB config
+rm -rf .elasticbeanstalk
+
+#init eb for the project
+eb init trading-app --platform java --region us-east-1-rf .elasticbeanstalk
+eb use TradingApp-prod
+#Edit EB config file which tells EB which artifact to deploy
+cat >> .elasticbeanstalk/config.yml <<_EOF
+deploy:
+   artifact: target/trading-1.0-SNAPSHOT-elastic-beanstalk.zip
+ _EOF
+#deploy
+eb deploy
 # Docker Architecture Diagram
 - trading_app docker diagram including:
  - use draw.io and AWS icons (it's already in draw.io library)
