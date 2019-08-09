@@ -98,6 +98,7 @@ sleep1
 pip install --system awsebcli
 ```
 # EB CLI
+```BASH
 #ssh Jenkins instance
 cd ~
 git clone https://your_trading_app_url
@@ -117,6 +118,7 @@ deploy:
  _EOF
 #deploy
 eb deploy
+```
 # Docker Architecture Diagram
 - trading_app docker diagram including:
  - use draw.io and AWS icons (it's already in draw.io library)
