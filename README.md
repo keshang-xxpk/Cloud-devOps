@@ -17,7 +17,7 @@ This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the o
   - Step6.Deploy to eb envir using EB CLI.
 
 # Docker CLI
-```JAVA
+```BASH
 #auto start
 sudo systemctl enable docker
 #start service
