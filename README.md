@@ -122,19 +122,11 @@ eb deploy
 # Trading-app Architecture Diagram
 ![5A13915F-507C-4510-B803-58B608025AEF](assets/5A13915F-507C-4510-B803-58B608025AEF.png)
    
-
 # Cloud Architecture Diagram
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20Diagrem.png)
 
 # AWS EB and Jenkins CI/CD Pipeline Diagram
 - Please refer to Jenkins guide architecture diagram.
-
-
-# `trading_app` Demo project
-
-This project only keeps the red component in the diagram below for demo and cloud deployment learning purpose.
-
-![5A13915F-507C-4510-B803-58B608025AEF](assets/5A13915F-507C-4510-B803-58B608025AEF.png)
 
 # What can AWS do for us?
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20VS%20JDBC.png)
