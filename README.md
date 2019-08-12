@@ -126,7 +126,7 @@ eb deploy
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20Diagrem.png)
 
 # AWS EB and Jenkins CI/CD Pipeline Diagram
-- Please refer to Jenkins guide architecture diagram.
+![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/Jenkins%2CEB.png)
 
 # What can AWS do for us?
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20VS%20JDBC.png)
