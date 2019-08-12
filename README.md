@@ -100,6 +100,9 @@ curl localhost:8080/health
 #verify Swagger UI from your browser
 localhost:8080/swagger-ui.html
 ```
+# AWS EB and Jenkins CI/CD Pipeline Diagram
+![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/Jenkins%2CEB.png)
+
 # Setup Jenkins Instance CLI
 ```BASH
 #default user name is ubuntu
@@ -147,8 +150,6 @@ eb deploy
 # Cloud Architecture Diagram
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20Diagrem.png)
 
-# AWS EB and Jenkins CI/CD Pipeline Diagram
-![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/Jenkins%2CEB.png)
 
 # What can AWS do for us?
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20VS%20JDBC.png)
