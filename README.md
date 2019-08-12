@@ -15,6 +15,29 @@ This project using AWS cloud service(EC2,RDS,EB,Jenkins and etc) to manage the o
   - Step4.Download the latest source code of Jenkins from GitHub.
   - Step5.Complie and package source code.
   - Step6.Deploy to eb envir using EB CLI.
+# Trading-app Architecture Diagram
+![5A13915F-507C-4510-B803-58B608025AEF](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/trading_app_diagrem.png)
+### Data Access Object(DAO):
+#### <br>DAO stands for data access object. It provides a CRUD interface for a single entity.</br>
+- TraderDao
+- AccountDao
+- QuoteDao
+- SecurityOdreDao
+- PositionDao
+- MarketDataDao
+### Service Layer(Bussiness Logic)
+#### <br>The service layer stands on DAO to handle business requirements.Inside the service, we could design different business logic such as implementing validations, constraints and so on.</br>
+- DashboardService
+- FundTransferService
+- OrderService
+- RegisterService
+- QuoteService
+### Controller(REST API)
+#### <br>Controllers receive input, and generate output. They would handle the navigation between the different views</br>
+- DashboardController
+- TraderController
+- OrderController
+- QuoteController
 
 # Docker CLI
 ```BASH
@@ -119,8 +142,7 @@ deploy:
 #deploy
 eb deploy
 ```
-# Trading-app Architecture Diagram
-![5A13915F-507C-4510-B803-58B608025AEF](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/trading_app_diagrem.png)
+
    
 # Cloud Architecture Diagram
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20Diagrem.png)
