@@ -120,7 +120,7 @@ deploy:
 eb deploy
 ```
 # Trading-app Architecture Diagram
-![5A13915F-507C-4510-B803-58B608025AEF](assets/5A13915F-507C-4510-B803-58B608025AEF.png)
+![5A13915F-507C-4510-B803-58B608025AEF](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/trading_app_diagrem.png)
    
 # Cloud Architecture Diagram
 ![](https://github.com/keshang-xxpk/cloud-devOps/blob/master/assets/AWS%20Diagrem.png)
